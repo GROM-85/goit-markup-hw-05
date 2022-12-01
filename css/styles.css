@@ -649,14 +649,10 @@ footer {
   display: flex;
   padding-bottom: 50px;  
   justify-content: center;
-  gap:8px;
-
-  text-align: center;
+  gap:8px; 
   
 }
-.filter li {
-  display: inline-block;
-}
+
 .btn.secondary {  
   padding: 6px 22px;
 
@@ -699,8 +695,8 @@ footer {
   width: 370px;
 }
 
-.card:hover,
-.card:focus {
+.card-link:hover,
+.card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -725,7 +721,8 @@ footer {
   transition:transform 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
-.card-box-relative:hover .card-overlay{   
+.card-link:hover .card-overlay,
+.card-link:focus .card-overlay{   
  transform: translateY(0);
 }  
 
