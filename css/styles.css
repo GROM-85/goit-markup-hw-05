@@ -22,6 +22,7 @@ body {
   font-family: Roboto, sans-serif;
   color: var(--primary-text-color);
   background-color: var(--bcg-white-color);
+  overflow-x: hidden;
 }
 
 button{
@@ -31,6 +32,19 @@ button{
   font-family:inherit;
   background-color:transparent;
   cursor:pointer;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: block
 }
 
 .list {
@@ -46,6 +60,13 @@ a:link {
   opacity:0;
   position:absolute;
 }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto
+}
+
 /* BUTTONS */
 .btn {
   background-color: var(--bcg-white-color);
@@ -65,12 +86,15 @@ a:link {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;  
   padding-left:15px;
   padding-right:15px;
-  margin: 0 auto;
-  /* outline: 2px solid #d85d11; */
+  margin-right:auto;
+  margin-left:auto; 
+ 
 }
+
+
 .section{
   padding-top: 94px;
   padding-bottom: 94px;
@@ -102,7 +126,7 @@ a:link {
 
 .main-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -311,10 +335,7 @@ footer {
   transform: translate(-50%, -50%) scale(1) rotate(360deg);
   transition: transform 500ms cubic-bezier(0.4,0,0.2,1) ; 
   
-}
-
-
- 
+} 
 
 .button-close{
   position:absolute;
@@ -341,8 +362,7 @@ footer {
 
 
 .hero.hero-overlay {
-  max-width: 1600px;
-  height: 600px;
+  width: 1600px;
   margin-left: auto;
   margin-right: auto;
   
@@ -361,15 +381,18 @@ footer {
   text-align: center;
 }
 
-.hero {  
+.hero { 
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
   background-color:var(--bcg-white-color);
   text-align: center;
   padding: 200px 0;
 }
 
-.hero-title {  
+.hero-title { 
   margin:0 0 30px;  
- 
+  
   font-size: 44px;
   font-weight: 900;
   color: #ffffff;
@@ -496,7 +519,7 @@ footer {
 
 .activity-overlay > p{
   margin:0;
-  padding: 27px 107px;
+  padding: 27px 0;
   font-size: 14px;
   font-weight:700; 
   text-align: center;
@@ -626,7 +649,7 @@ footer {
   display: flex;
   padding-bottom: 50px;  
   justify-content: center;
-  
+  gap:8px;
 
   text-align: center;
   
@@ -634,8 +657,7 @@ footer {
 .filter li {
   display: inline-block;
 }
-.btn.secondary {
-  margin: 4px;
+.btn.secondary {  
   padding: 6px 22px;
 
   font-family: inherit;
@@ -698,7 +720,7 @@ footer {
   margin: 0;
   bottom:0;      
   
-  height:110%;
+  height:100%;
   transform:translateY(100%);
   transition:transform 250ms cubic-bezier(0.4,0,0.2,1);
 }
