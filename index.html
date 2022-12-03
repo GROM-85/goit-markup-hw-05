@@ -35,7 +35,11 @@
         </nav>
         <ul class="contacts list">
           <li class="item">
-            <a href="mailto:info@example.com" class="email link" aria-label="email">
+            <a
+              href="mailto:info@example.com"
+              class="email link"
+              aria-label="email"
+            >
               <svg class="contacts-icon">
                 <use href="./images/svg/icons.svg#icon-envelope"></use>
               </svg>
@@ -55,13 +59,15 @@
     </header>
 
     <main>
-      <section class="hero hero-overlay">        
-          <h1 class="hero-title">EFFECTIVE SOLUTIONS FOR <br> YOUR BUSINESS</h1>
-          <button class="btn primary" type="button " data-modal-open>Request our service</button>
-        
+      <section class="hero hero-overlay">
+        <h1 class="hero-title">
+          EFFECTIVE SOLUTIONS FOR <br />
+          YOUR BUSINESS
+        </h1>
+        <button class="btn primary" type="button " data-modal-open>
+          Request our service
+        </button>
       </section>
-
-      
 
       <section class="advantages section">
         <div class="container">
@@ -108,7 +114,6 @@
               <div class="activity-overlay">
                 <p>DESKTOP APPS</p>
               </div>
-              
             </li>
             <li class="activity-item">
               <img
@@ -120,14 +125,12 @@
               <div class="activity-overlay">
                 <p>MOBILE APPS</p>
               </div>
-              
             </li>
             <li class="activity-item">
               <img src="images/img3.jpg" alt="third" width="370" height="294" />
               <div class="activity-overlay">
                 <p>DESIGN SOLUTIONS</p>
               </div>
-              
             </li>
           </ul>
         </div>
@@ -516,24 +519,106 @@
             </li>
           </ul>
         </div>
+
+        <form class="form-subscribe" action="">
+          <label for="email">
+            <div class="subscribe">
+              <p class="subscribe-title">Subscribe to the newsletter</p>
+              <div class="input-container">
+              <input class="subscribe-input" type="email" placeholder="E-mail" required/>
+              <button class="btn primary subscribe-btn">Subscribe
+                <svg class="subscribe-icon">
+                  <use href="./images/svg/icons.svg#send"></use>
+                </svg>
+              </button>
+            </div>
+            </div>
+          </label>
+        </form>
       </div>
     </footer>
 
     <!-- MODAL WINDOW -->
-    
+
     <div class="backdrop is-hidden" backdrop>
       <div class="modal-data">
         <button class="button-close" data-modal-close>
           <svg class="icon-close">
-            <use href="./images/svg/icons-backup.svg#close"></use>
+            <use href="./images/svg/icons.svg#close"></use>
           </svg>
-          
         </button>
+
+        <div class="modal-info">
+          <p class="form-title">
+            Leave your inforamtion and we'll call you back
+          </p>
+          <form
+            class="form-inputs"
+            name="submit-form"
+            autocomplete="on"
+            validate
+          >
+            <label for="fname-lname" class="label">
+              Your Name<br />
+
+              <input
+                class="input"
+                type="text"
+                name="fname-lname"
+                autofocus
+                required
+              />
+              <svg class="form-icon">
+                <use href="./images/svg/icons.svg#person"></use>
+              </svg>
+            </label>
+            <label for="phone" class="label">
+              Phone <br />
+
+              <input class="input" type="text" name="phone" required />
+              <svg class="form-icon">
+                <use href="./images/svg/icons.svg#phone"></use>
+              </svg>
+            </label>
+            <label for="email" class="label">
+              Email <br />
+
+              <input class="input" type="email" name="email" required />
+              <svg class="form-icon">
+                <use href="./images/svg/icons.svg#email-black"></use>
+              </svg>
+            </label>
+            <label for="comment" class="label comment">
+              Comment <br />
+              <textarea
+                class="input comment"
+                rows="8"
+                name="comment"
+                placeholder="Enter the text"
+              ></textarea>
+            </label>
+
+            <div class="term-cond">
+              <div class="checkbox-container">
+                <input class="checkbox-input" type="checkbox" name="checkbox" />
+                <label class="checkbox" for="check-icon">
+                  <svg class="check-icon">
+                    <use href="./images/svg/icons.svg#checkbox"></use>
+                  </svg>
+                </label>
+              </div>
+              <p class="agreement-text">
+                I agree with all newsletter and accept the
+              </p>
+              <a class="agreement-link agreement-text" href="#">
+                Terms and Conditions</a>
+            </div>
+            <button class="btn primary submit-btn" type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </div>
 
-    <script src="./js/modal.js">      
-    </script>
-
+    <script src="./js/modal.js"></script>
   </body>
 </html>
